@@ -3,5 +3,29 @@ h1 {
 }
 
 body {
-    background-color: green;
+    background-color: white;
+}
+
+
+
+/******************** FOOTER **********************/
+footer {
+    background-color: black;
+    text-align: center;
+}
+
+footer li {
+    list-style-type: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+footer li a {
+    color: white;
+}
+
+footer span {
+    color: white;
 }
