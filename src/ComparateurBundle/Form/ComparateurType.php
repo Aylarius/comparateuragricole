@@ -5,6 +5,10 @@ namespace ComparateurBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
+
 
 class ComparateurType extends AbstractType
 {
@@ -15,13 +19,47 @@ class ComparateurType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('produit')
-            ->add('destination')
-            ->add('prix')
-            ->add('proteines')
-            ->add('humidite')
-            ->add('ps')
-            ->add('hagberg')
+            ->add('produit', ChoiceType::class, array (
+                'choices'  => array(
+                    'ble' => 'Blé',
+                    'mais' => 'Maïs',
+                    'millet' => 'Millet',
+                    'orge' => 'Orge',
+                    'riz' => 'Riz',
+                    'seigle' => 'Seige',
+                    'sorgho' => 'Sorgho'
+                ),
+                'attr' => array (
+                    'placeholder' => 'Produit'
+                )))
+            ->add('destination', ChoiceType::class, array (
+                'choices'  => array(
+                    'paris' => 'Paris',
+                    'rouen' => 'Rouen',
+                ),
+                'attr' => array (
+                    'placeholder' => 'Destination'
+                )))
+            ->add('prix', IntegerType::class, array (
+                'attr' => array (
+                    'placeholder' => 'Prix'
+                )))
+            ->add('proteines', NumberType::class, array (
+                'attr' => array (
+                    'placeholder' => 'Protéines'
+                )))
+            ->add('humidite', NumberType::class, array (
+                'attr' => array (
+                    'placeholder' => 'Humidité'
+                )))
+            ->add('ps', NumberType::class, array(
+                'attr' => array(
+                    'placeholder' => 'PS'
+                )))
+            ->add('hagberg', NumberType::class, array(
+                'attr' => array(
+                    'placeholder' => 'Hagberg'
+                )))
         ;
     }
     
