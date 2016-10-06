@@ -22,6 +22,7 @@ header {
 
 .sell {
     float: right;
+}
 .center {
     text-align: center;
 }
@@ -80,7 +81,6 @@ a:focus {
 #form-new #qualites {
     display: inline-block;
     width: 100%;
->>>>>>> 4d70e5da8f8b7bf3f251012f0bfa09e53555e617
 }
 
 .col-form {
