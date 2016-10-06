@@ -1,0 +1,7 @@
+comparateur_comparateur:
+    resource: "@ComparateurBundle/Resources/config/routing/comparateur.yml"
+    prefix:   /comparateur
+
+comparateur_homepage:
+    path:     /
+    defaults: { _controller: ComparateurBundle:Default:index }

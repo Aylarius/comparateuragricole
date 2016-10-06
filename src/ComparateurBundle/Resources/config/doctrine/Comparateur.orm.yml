@@ -1,0 +1,28 @@
+ComparateurBundle\Entity\Comparateur:
+    type: entity
+    table: null
+    repositoryClass: ComparateurBundle\Repository\ComparateurRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        produit:
+            type: string
+            length: 255
+        destination:
+            type: string
+            length: 255
+        prix:
+            type: float
+        proteines:
+            type: float
+        humidite:
+            type: float
+        ps:
+            type: float
+        hagberg:
+            type: integer
+    lifecycleCallbacks: {  }

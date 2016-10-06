@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Comparateur</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ comparateur.id }}</td>
+            </tr>
+            <tr>
+                <th>Produit</th>
+                <td>{{ comparateur.produit }}</td>
+            </tr>
+            <tr>
+                <th>Destination</th>
+                <td>{{ comparateur.destination }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ comparateur.prix }}</td>
+            </tr>
+            <tr>
+                <th>Proteines</th>
+                <td>{{ comparateur.proteines }}</td>
+            </tr>
+            <tr>
+                <th>Humidite</th>
+                <td>{{ comparateur.humidite }}</td>
+            </tr>
+            <tr>
+                <th>Ps</th>
+                <td>{{ comparateur.ps }}</td>
+            </tr>
+            <tr>
+                <th>Hagberg</th>
+                <td>{{ comparateur.hagberg }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('comparateur_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('comparateur_edit', { 'id': comparateur.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

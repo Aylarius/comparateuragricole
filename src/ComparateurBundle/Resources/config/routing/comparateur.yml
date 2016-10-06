@@ -1,0 +1,24 @@
+comparateur_index:
+    path:     /
+    defaults: { _controller: "ComparateurBundle:Comparateur:index" }
+    methods:  GET
+
+comparateur_show:
+    path:     /{id}/show
+    defaults: { _controller: "ComparateurBundle:Comparateur:show" }
+    methods:  GET
+
+comparateur_new:
+    path:     /new
+    defaults: { _controller: "ComparateurBundle:Comparateur:new" }
+    methods:  [GET, POST]
+
+comparateur_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ComparateurBundle:Comparateur:edit" }
+    methods:  [GET, POST]
+
+comparateur_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ComparateurBundle:Comparateur:delete" }
+    methods:  DELETE

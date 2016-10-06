@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Comparateur list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Produit</th>
+                <th>Destination</th>
+                <th>Prix</th>
+                <th>Proteines</th>
+                <th>Humidite</th>
+                <th>Ps</th>
+                <th>Hagberg</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comparateur in comparateurs %}
+            <tr>
+                <td><a href="{{ path('comparateur_show', { 'id': comparateur.id }) }}">{{ comparateur.id }}</a></td>
+                <td>{{ comparateur.produit }}</td>
+                <td>{{ comparateur.destination }}</td>
+                <td>{{ comparateur.prix }}</td>
+                <td>{{ comparateur.proteines }}</td>
+                <td>{{ comparateur.humidite }}</td>
+                <td>{{ comparateur.ps }}</td>
+                <td>{{ comparateur.hagberg }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('comparateur_show', { 'id': comparateur.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('comparateur_edit', { 'id': comparateur.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('comparateur_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
