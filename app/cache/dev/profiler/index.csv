@@ -1,10 +1,4 @@
-d82282,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/,1475765443,,200
-cb0107,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur,1475765451,,301
-e03942,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475765452,87114d,200
-87114d,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475765452,,500
-3f73cb,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475765511,,200
-de2dfc,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475765562,,200
-f4e26c,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475765638,,200
-53ef3f,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475765684,,200
-13876c,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475765731,,200
-744468,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475765774,,200
+60e9b5,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475769339,,200
+da7580,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475769391,,200
+50a661,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475769419,,200
+34539a,127.0.0.1,GET,http://localhost/comparateuragricole/web/app_dev.php/comparateur/,1475769486,,200
