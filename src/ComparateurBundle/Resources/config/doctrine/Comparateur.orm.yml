@@ -16,13 +16,13 @@ ComparateurBundle\Entity\Comparateur:
             type: string
             length: 255
         prix:
-            type: float
+            type: integer
         proteines:
-            type: float
+            type: integer
         humidite:
-            type: float
+            type: integer
         ps:
-            type: float
+            type: integer
         hagberg:
             type: integer
     lifecycleCallbacks: {  }
