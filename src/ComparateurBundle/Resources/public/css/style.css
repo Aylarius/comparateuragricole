@@ -6,6 +6,14 @@ body {
     background-color: white;
 }
 
+/********************* BUTTON ************************/
+.buy {
+    float: right;
+}
+
+.sell {
+    float: right;
+}
 
 
 /******************** FOOTER **********************/

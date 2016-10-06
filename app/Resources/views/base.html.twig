@@ -8,7 +8,16 @@
     </head>
 
     <body>
-    <img src="{{ asset('bundles/comparateur/img/logo_couleurs_site_grand-01.png') }} "alt="logo">
+    <header>
+    <img src="{{ asset('bundles/comparateur/img/logo_couleurs_site_grand-01.png') }} "alt="logo" id="logo">
+    </header>
+
+    <div class="navbar-header">
+        <div class="navbar-brand">
+            <button class="buy">Acheteur</button>
+            <button class="sell">Vendeur</button>
+        </div>
+    </div>
 
     {% block body %}{% endblock %}
 

@@ -5,3 +5,7 @@ comparateur_comparateur:
 comparateur_homepage:
     path:     /
     defaults: { _controller: ComparateurBundle:Default:index }
+
+comparateur_test:
+    path:     /fraisdeportrouen
+    defaults: { _controller: ComparateurBundle:Comparateur:setFraisDePortsRouen }
