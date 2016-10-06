@@ -1,9 +1,18 @@
-h1 {
-    color: red;
+body {
+    background: url("../img/fond1.jpg") no-repeat center center fixed;
+    margin: 0px;
+    padding: 0px;
+    background-size: cover;
 }
 
-body {
+header {
     background-color: white;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+}
+.col-xs-12 {
+    padding: 0px;
 }
 
 /********************* BUTTON ************************/
@@ -13,27 +22,168 @@ body {
 
 .sell {
     float: right;
+.center {
+    text-align: center;
+}
+.main {
+    top: 100px;
+    position: relative;
+}
+#logo {
+    height: 60px;
+    margin-left:30px;
+    margin-top: 20px;
+}
+h3 {
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 20%;
+}
+a:focus {
+    outline: inherit;
+}
+/******************** FORM **********************/
+#form {
+    background-color: rgba(0,0,0,0.5);
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    float: none;
+    text-align: left;
+}
+#form-new {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#form h1 {
+    color: white;
+    padding-bottom: 10px;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
+#form-new label {
+    display: inline-block;
+    font-weight: inherit;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+    width: 20%;
+}
+
+#form-new #qualites {
+    display: inline-block;
+    width: 100%;
+>>>>>>> 4d70e5da8f8b7bf3f251012f0bfa09e53555e617
+}
+
+.col-form {
+    padding: 0px;
+
+}
+.input-2 {
+    margin-top: 10px;
+}
+.col-form div input {
+    width: 96%;
+}
+
+button, input, select, textarea {
+    font-size: 14px;
+    height: 30px;
+    width: 48%;
+    padding-left: 10px;
+    border-radius: 0px;
+    display: inline-block;
+    border: inherit;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    outline: inherit;
+}
+
+select {
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+#valid-button {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding: 3px;
+    height:35px;
+    background-color: #00C15E;
+    border: 0px;
+    color: white;
+    font-weight: 500;
+}
+#valid-button:focus {
+    outline: inherit;
+}
+hr {
+    display: inline-block;
+    width: 79%;
+    border-top: 2px solid white;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+.unite {
+    display: inline-block;
+    margin-left: -46px;
+    background-color: #979797;
+    width:42px;
+    padding: 5px 0px;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}
+#col-form-right {
+    text-align: right;
+}
+#col-form-right .unite {
+    margin-left: -45px;
+}
 
 /******************** FOOTER **********************/
 footer {
-    background-color: black;
+    background-color: #FBA000;
     text-align: center;
+    bottom:0px;
+    position: fixed;
+    width:100%;
 }
-
+footer ul {
+    margin: 0px;
+}
 footer li {
     list-style-type: none;
     text-decoration: none;
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
     text-transform: uppercase;
 }
 
 footer li a {
     color: white;
 }
-
+footer li a:hover, footer li a:visited {
+    color: white;
+}
 footer span {
     color: white;
 }

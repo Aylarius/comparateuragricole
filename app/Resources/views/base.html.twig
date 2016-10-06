@@ -3,14 +3,17 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}<link href="{{ asset('bundles/comparateur/css/style.css') }}" rel="stylesheet">{% endblock %}
+        {% block stylesheets %}
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ asset('bundles/comparateur/css/style.css') }}" rel="stylesheet">
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
 
     <body>
     <header>
+
     <img src="{{ asset('bundles/comparateur/img/logo_couleurs_site_grand-01.png') }} "alt="logo" id="logo">
-    </header>
 
     <div class="navbar-header">
         <div class="navbar-brand">
@@ -19,7 +22,12 @@
         </div>
     </div>
 
+        <img src="{{ asset('bundles/comparateur/img/logo_couleurs_site_grand-01.png') }} "alt="logo" id="logo">
+    </header>
+
+
     {% block body %}{% endblock %}
+
 
     <footer class="container-fluid">
         <div class="row">
@@ -32,10 +40,8 @@
         </div>
     </footer>
 
-    {% block javascripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     </body>
 </html>
