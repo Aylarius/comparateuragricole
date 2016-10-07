@@ -126,7 +126,10 @@ a:focus {
 .input-2 {
     margin-top: 10px;
 }
-.col-form div input {
+.col-form div input, .col-form input {
+    width: 96%;
+}
+#vendeur .col-form select {
     width: 96%;
 }
 
@@ -157,6 +160,7 @@ select, option {
     -webkit-appearance: none;
     -moz-appearance: none
 }
+
 #valid-button {
     margin-top: 20px;
     text-align: center;
@@ -183,7 +187,7 @@ hr {
 }
 .unite {
     display: inline-block;
-    margin-left: -46px;
+    margin-left: -45px;
     background-color: #979797;
     width:42px;
     padding: 5px 0px;
@@ -191,13 +195,26 @@ hr {
     font-weight: 300;
     text-align: center;
 }
-#col-form-right {
+.col-form-right {
     text-align: right;
 }
-#col-form-right .unite {
-    margin-left: -45px;
+.col-form-right #ville-label{
+    text-align: left;
+    width: 96%;
 }
-
+#form-new #vendeurs {
+    width:100%;
+    display: inline-block;
+}
+#resultats {
+    background-color: white;
+    overflow: scroll;
+    height: 200px;
+    padding-bottom: 20px;
+}
+.resultat {
+    margin-top: 20px;
+}
 /******************** FOOTER **********************/
 footer {
     background-color: #FBA000;
