@@ -11,25 +11,60 @@ header {
     height: 100px;
     width: 100%;
 }
-.col-xs-12 {
-    padding: 0px;
-}
-
-/********************* BUTTON ************************/
-.buy {
-    float: right;
-}
-
-.sell {
-    float: right;
-}
-.center {
-    text-align: center;
-}
 .main {
     top: 100px;
     position: relative;
 }
+.col-xs-12 {
+    padding: 0px;
+}
+
+#col-img {
+    position: absolute;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+/********************* BUTTON ************************/
+#buttons {
+    display: block;
+}
+#buttons button {
+    height:inherit;
+    text-transform: uppercase;
+    color: white;
+    background-color: #979797;
+}
+#buy {
+    float: right;
+    display: inline-block;
+    width: 120px;
+    margin-top: 60px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 0px 10px 0px 0px;
+
+}
+#sell {
+    float: right;
+    display: inline-block;
+    width: 120px;
+    margin-top: 60px;
+    margin-right: 2px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 10px 0px 0px 0px;
+}
+#div-buttons{
+    display: inline-block;
+    float: none;
+    padding: 0px;
+}
+.center {
+    text-align: center;
+}
+
 #logo {
     height: 60px;
     margin-left:30px;
@@ -55,6 +90,7 @@ a:focus {
     display: inline-block;
     float: none;
     text-align: left;
+    border-radius: 0px 0px 10px 10px;
 }
 #form-new {
     padding-left: 5%;
@@ -117,7 +153,10 @@ select {
     background-repeat: no-repeat;
     background-color: white;
 }
-
+select, option {
+    -webkit-appearance: none;
+    -moz-appearance: none
+}
 #valid-button {
     margin-top: 20px;
     text-align: center;
