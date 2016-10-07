@@ -127,7 +127,7 @@ class ComparateurController extends Controller
     }
 
     public function setFraisDePortsRouenAction(){
-
+        /****************** taleaux ************************/
         $rouen = array (
             "5" => "3.06",
             "10" => "3.39",
@@ -205,7 +205,6 @@ class ComparateurController extends Controller
             "690" => "36",
             "700" => "36.51");
 
-
         $paris = array (
             "5" => "3.45",
             "10" => "3.82",
@@ -282,27 +281,24 @@ class ComparateurController extends Controller
             "680" => "40.03",
             "690" => "40.59",
             "700" => "41.16");
+        /******************** fin tableaux ***************/
+        //$ville = $_POST['ville'];// le boutton sera <input type="text" name="ville"/> pour que $_POST appel son contenu.
+        $ville = 'rambouillet';
+         $destinations = "Rouen";
+        $fraisDePort = 0;
 
-        $ville = "Lille";
-        $destinations = "Rouen";
         //calcul distance ville  rouen
         $q = "http://maps.googleapis.com/maps/api/distancematrix/json?origins=".$ville."&destinations=".$destinations."&mode=driving&sensor=false";
-
         $json = file_get_contents($q);
-
         $details = json_decode($json, TRUE);
-
         $distanceRouen = $details['rows'][0]['elements'][0]['distance']['value'];
+
 
         //calcul distance ville paris
         $destinations = "Paris";
-
         $q = "http://maps.googleapis.com/maps/api/distancematrix/json?origins=".$ville."&destinations=".$destinations."&mode=driving&sensor=false";
-
         $json = file_get_contents($q);
-
         $details = json_decode($json, TRUE);
-
         $distanceParis = $details['rows'][0]['elements'][0]['distance']['value'];
 
         if ($distanceRouen < $distanceParis){
@@ -315,9 +311,6 @@ class ComparateurController extends Controller
                     break;
                 }
             }
-
-
-
         }
         else{
             //paris
@@ -330,7 +323,8 @@ class ComparateurController extends Controller
                 }
             }
         }
-var_dump($value);
+        
+var_dump($fraisDePort);
 
         exit;
 
