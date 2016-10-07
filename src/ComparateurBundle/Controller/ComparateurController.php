@@ -322,7 +322,7 @@ class ComparateurController extends Controller
         else{
             //paris
             $destinations = "Paris";
-            $resultats = $em->getRepository('ComparateurBundle:Comparateur')->getResultsByCity($destinations);
+            $resultats = $em->getRepository('ComparateurBundle:Comparateur')->getResultsByCity($destinations, $cereales);
             $distanceParis = round($distanceParis/1000);
 
             foreach ($paris as $key => $value){

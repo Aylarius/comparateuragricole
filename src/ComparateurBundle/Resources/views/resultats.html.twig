@@ -15,28 +15,22 @@
                                     {% set prixFinal = 0 %}
                                     {% for resultat in resultats %}
                                         {% set prixFinal = fraisdeport + resultat.prix %}
-                                        <div class="col-xs-2">
-                                            <img src="{{ asset('bundles/comparateur/img/entreprise3.jpg') }}" alt="logo nutella" width="100%">
-                                        </div>
                                         <div class="col-xs-4">
                                             <span class="entreprise">Entreprise :</span>
-                                            <span class="nom-entreprise">Nutella</span>
-                                            <br>
-                                            <span class="entreprise">Contact :</span>
-                                            <span class="nom-entreprise">Mr Dupont</span>
+                                            <span class="nom-entreprise">{{ resultat.entreprise }}</span>
                                         </div>
                                         <div class="col-xs-4">
                                             <span class="proteines-class">Protéines :</span>
                                             <span class="value-proteines">{{ resultat.proteines }}</span>
                                             <br>
                                             <span class="ps-class">PS :</span>
-                                            <span class="value-ps">80 kg/hL</span>
+                                            <span class="value-ps">{{ resultat.ps }} kg/hL</span>
                                             <br>
                                             <span class="humidite-class">Humidité :</span>
-                                            <span class="value-humidite">3%</span>
+                                            <span class="value-humidite">{{ resultat.humidite }} %</span>
                                             <br>
                                             <span class="hagberg-class">Hagberg :</span>
-                                            <span class="value-hagberg">210 sec</span>
+                                            <span class="value-hagberg">{{ resultat.hagberg }} sec</span>
                                         </div>
                                         <div class="col-xs-2" id="block-prix">
                                             <span>Prix : {{ prixFinal }}</span>

@@ -15,6 +15,13 @@
                             {{ form_errors(form) }}
 
                             <div class="form-contour">
+                                {{ form_label(form.entreprise) }}
+                                <hr>
+                                {{ form_errors(form.entreprise) }}
+                                {{ form_widget(form.entreprise) }}
+                            </div>
+
+                            <div class="form-contour">
                                 {{ form_label(form.produit) }}
                                 <hr>
                                 {{ form_errors(form.produit) }}
