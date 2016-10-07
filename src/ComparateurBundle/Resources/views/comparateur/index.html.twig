@@ -1,51 +1,43 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Comparateur list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Produit</th>
-                <th>Destination</th>
-                <th>Prix</th>
-                <th>Proteines</th>
-                <th>Humidite</th>
-                <th>Ps</th>
-                <th>Hagberg</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for comparateur in comparateurs %}
-            <tr>
-                <td><a href="{{ path('comparateur_show', { 'id': comparateur.id }) }}">{{ comparateur.id }}</a></td>
-                <td>{{ comparateur.produit }}</td>
-                <td>{{ comparateur.destination }}</td>
-                <td>{{ comparateur.prix }}</td>
-                <td>{{ comparateur.proteines }}</td>
-                <td>{{ comparateur.humidite }}</td>
-                <td>{{ comparateur.ps }}</td>
-                <td>{{ comparateur.hagberg }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('comparateur_show', { 'id': comparateur.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('comparateur_edit', { 'id': comparateur.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row center">
+                <div class="col-xs-8" id="form">
+                    <div id="form-new">
+                        <h1>Rechercher</h1>
+                        <form name="vendeur" id="vendeur" method="post">
+                            <div id="vendeurs">
+                                <div class="col-xs-6 col-form">
+                                    <label>Produits</label>
+                                    <select id="produits" name="produits" placeholder="Produit">
+                                        <option value="ble">Blé</option>
+                                        <option value="mais">Maïs</option>
+                                        <option value="millet">Millet</option>
+                                        <option value="orge">Orge</option>
+                                        <option value="riz">Riz</option>
+                                        <option value="seigle">Seige</option>
+                                        <option value="sorgho">Sorgho</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-6 col-form col-form-right">
+                                    <label id="ville-label">Ville</label>
+                                    <input type="text" id="ville" name="ville" required="required" placeholder="Ville" />
+                                </div>
+                            </div>
+                            <input type="submit" value="Rechercher" class="btn btn-default pull-right" id="valid-button"/>
+                        </form>
 
-    <ul>
-        <li>
-            <a href="{{ path('comparateur_new') }}">Create a new entry</a>
-        </li>
-    </ul>
-{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                        {% endblock %}

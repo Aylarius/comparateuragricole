@@ -30,7 +30,7 @@ class ComparateurType extends AbstractType
                     'sorgho' => 'Sorgho'
                 ),
                 'attr' => array (
-                    'placeholder' => 'Produit'
+                    'placeholder' => 'Produit',
                 )))
             ->add('destination', ChoiceType::class, array (
                 'choices'  => array(
