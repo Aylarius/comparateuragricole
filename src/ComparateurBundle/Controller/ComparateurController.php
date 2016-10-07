@@ -126,7 +126,7 @@ class ComparateurController extends Controller
         ;
     }
 
-    public function setFraisDePortsRouenAction(){
+    public function setFraisDePortsAction(){
         /****************** taleaux ************************/
         $rouen = array (
             "5" => "3.06",
@@ -282,9 +282,10 @@ class ComparateurController extends Controller
             "690" => "40.59",
             "700" => "41.16");
         /******************** fin tableaux ***************/
-        //$ville = $_POST['ville'];// le boutton sera <input type="text" name="ville"/> pour que $_POST appel son contenu.
-        $ville = 'rambouillet';
-         $destinations = "Rouen";
+
+        $cereales = $_POST['produits'];
+        $ville = $_POST['ville'];// le boutton sera <input type="text" name="ville"/> pour que $_POST appel son contenu.
+        $destinations = "Rouen";
         $fraisDePort = 0;
 
         //calcul distance ville  rouen
@@ -301,8 +302,14 @@ class ComparateurController extends Controller
         $details = json_decode($json, TRUE);
         $distanceParis = $details['rows'][0]['elements'][0]['distance']['value'];
 
+        
+        
+        $em = $this->getDoctrine()->getManager(); // appel doctrine
+        
         if ($distanceRouen < $distanceParis){
+            $destinations = "Rouen"; 
             //rouen
+            $resultats = $em->getRepository('ComparateurBundle:Comparateur')->getResultsByCity($destinations, $cereales);
             $distanceRouen = round($distanceRouen/1000);
 
             foreach($rouen as $key => $value){
@@ -314,6 +321,8 @@ class ComparateurController extends Controller
         }
         else{
             //paris
+            $destinations = "Paris";
+            $resultats = $em->getRepository('ComparateurBundle:Comparateur')->getResultsByCity($destinations);
             $distanceParis = round($distanceParis/1000);
 
             foreach ($paris as $key => $value){
@@ -324,63 +333,9 @@ class ComparateurController extends Controller
             }
         }
         
-var_dump($fraisDePort);
-
-        exit;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*if $rouen
-        foreach($rouen as $key=>$value)
-            if ($distance < $key)
-                return $this -> render (chemintwig, array ( '$key'=>'value'));
-            else $paris;
-*/
+        return $this->render('ComparateurBundle::resultats.html.twig', array(
+            'resultats' => $resultats, 'fraisdeport' => $fraisDePort
+        ));
 
     }
 

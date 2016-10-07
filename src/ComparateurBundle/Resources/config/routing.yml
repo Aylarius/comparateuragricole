@@ -8,4 +8,8 @@ comparateur_homepage:
 
 comparateur_test:
     path:     /fraisdeportrouen
-    defaults: { _controller: ComparateurBundle:Comparateur:setFraisDePortsRouen }
+    defaults: { _controller: ComparateurBundle:Comparateur:setFraisDePorts }
+
+page_resultats:
+    path:     /resultats
+    defaults: { _controller: ComparateurBundle:Comparateur:setFraisDePorts }

@@ -225,27 +225,4 @@ class Comparateur
     {
         return $this->hagberg;
     }
-
-    /**
-     * Set entreprise
-     *
-     * @param string $entreprise
-     * @return Comparateur
-     */
-    public function setEntreprise($entreprise)
-    {
-        $this->entreprise = $entreprise;
-
-        return $this;
-    }
-
-    /**
-     * Get entreprise
-     *
-     * @return string 
-     */
-    public function getEntreprise()
-    {
-        return $this->entreprise;
-    }
 }

@@ -9,6 +9,9 @@ ComparateurBundle\Entity\Comparateur:
             generator:
                 strategy: AUTO
     fields:
+        entreprise:
+             type: string
+             length: 255
         produit:
             type: string
             length: 255
