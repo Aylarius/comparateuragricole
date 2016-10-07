@@ -86,7 +86,7 @@ a:focus {
     background-color: rgba(0,0,0,0.5);
     padding: 30px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     display: inline-block;
     float: none;
     text-align: left;
@@ -208,13 +208,45 @@ hr {
 }
 #resultats {
     background-color: white;
-    overflow: scroll;
+    /*overflow: scroll;*/
     height: 200px;
     padding-bottom: 20px;
 }
 .resultat {
     margin-top: 20px;
 }
+
+/******************** RESULTAT **********************/
+#result-entreprise{
+    border: 1px black solid;
+    margin-left: 5%;
+    height: 160px;
+    width: 33%;
+    padding-top: 65px;
+    font-weight: 700;
+}
+
+#result-quality{
+    height: 160px;
+    padding-top: 40px;
+    width: 30%;
+}
+
+
+#block-prix{
+    height: 160px;
+    padding-top: 65px;
+    text-align: center;
+    background-color: #FBA000;
+    width: 27%;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+
+
+
+
 /******************** FOOTER **********************/
 footer {
     background-color: #FBA000;
