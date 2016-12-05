@@ -37,5 +37,8 @@ ComparateurBundle
 7. Enfin mettre les droits sur le projet en saisissant dans le terminal :  
 `sudo chmod -R 777 app/cache/ app/logs/`  
 
-8. Vous pouvez désormais afficher le site via votre localhost de cette façon :  
+8. Ajouter et lier les assets (le dossier Resources/public)    
+`php app/console assets:install --symlink`  
+
+9. Vous pouvez désormais afficher le site via votre localhost de cette façon :  
 `localhost/comparateuragricole/web/`   
